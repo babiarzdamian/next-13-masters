@@ -8,6 +8,7 @@ export const Navbar = () => {
 			<div className="flex w-full items-center px-4 py-3 md:px-8">
 				<NavbarLogo />
 				<ul className="h-20 w-full items-center justify-end gap-4 px-4 sm:flex md:px-8">
+					<NavbarMenuItem href="/products" title="Products" />
 					<NavbarMenuItem href="/account" title="Account" />
 					<NavbarMenuItem
 						href="/cart"
