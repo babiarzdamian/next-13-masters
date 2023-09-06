@@ -23,7 +23,10 @@
 			}
 		],
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./src/*"],
+			"@atoms/*": ["./src/ui/atoms/*"],
+			"@molecules/*": ["./src/ui/molecules/*"],
+			"@organisms/*": ["./src/ui/organisms/*"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js"],
