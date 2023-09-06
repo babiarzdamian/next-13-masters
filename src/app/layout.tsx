@@ -7,7 +7,7 @@ import { Header } from "@organisms/Header";
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Shopeat",
+	title: "SHOPSEL",
 	description: "The best shop for your daily needs",
 };
 
