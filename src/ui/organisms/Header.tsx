@@ -2,7 +2,7 @@ import { Navbar } from "@molecules/Navbar";
 
 export const Header = () => {
 	return (
-		<header className="mx-auto">
+		<header className="sticky top-0 mx-auto">
 			<Navbar />
 		</header>
 	);
