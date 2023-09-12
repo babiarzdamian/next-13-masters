@@ -12,10 +12,10 @@ export const generateMetadata = async ({
 	const title = `${product.name} - ShopSel`;
 	return {
 		title,
-		description: `Product ${product.description}`,
+		description: `${product.description}`,
 		openGraph: {
 			title,
-			description: `Product ${product.description}`,
+			description: `${product.description}`,
 			type: "website",
 			images: [
 				{
@@ -30,17 +30,16 @@ export const generateMetadata = async ({
 export default async function SingleProductPage({ params }: { params: { productId: string } }) {
 	const product = await getProductById(params.productId);
 	return (
-		<>
-			<div className="flex flex-col items-center justify-between px-6 py-12 sm:px-12">
-				<section className="mx-auto max-w-6xl">
-					<h1 className="text-2xl font-bold">{product.name}</h1>
-				</section>
-				<aside className="mt-12">
-					<Suspense fallback={"Loading suggested products..."}>
-						<SuggestedProductList />
-					</Suspense>
-				</aside>
-			</div>
-		</>
+		<div className="flex flex-col items-center text-center">
+			<section className="mx-auto max-w-6xl">
+				<h1 className="text-2xl font-bold">{product.name}</h1>
+				<p>{product.description}</p>
+			</section>
+			<aside className="mt-12">
+				<Suspense fallback={"Loading suggested products..."}>
+					<SuggestedProductList />
+				</Suspense>
+			</aside>
+		</div>
 	);
 }

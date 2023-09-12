@@ -1,10 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export const NavbarLogo = () => {
-	return (
-		<Link href="/">
-			<Image src="/images/logo-theme-light.png" alt="Amber Logo" width={190} height={45} />
-		</Link>
-	);
+	return <Image src="/images/logo-theme-light.png" alt="Shopsel Logo" width={190} height={45} />;
 };

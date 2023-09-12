@@ -5,6 +5,14 @@ const nextConfig = {
 		typedRoutes: true,
 		mdxRs: true,
 	},
+	async rewrites() {
+		return [
+			{
+				source: "/products",
+				destination: "/products/1",
+			},
+		];
+	},
 };
 
 const withMDX = require("@next/mdx")();
