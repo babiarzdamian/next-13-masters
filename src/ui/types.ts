@@ -9,3 +9,8 @@ export type ProductItemProps = {
 		alt: string;
 	};
 };
+
+export type ProductItemColorVariant = {
+	name: string;
+	color: string;
+};

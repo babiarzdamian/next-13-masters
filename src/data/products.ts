@@ -1,4 +1,4 @@
-import type { ProductItemProps } from "@/ui/types";
+import type { ProductItemColorVariant, ProductItemProps } from "@/ui/types";
 
 export const products: ProductItemProps[] = [
 	{
@@ -41,4 +41,14 @@ export const products: ProductItemProps[] = [
 			alt: "Product 4",
 		},
 	},
+];
+
+export const productColorVariants: ProductItemColorVariant[] = [
+	{ name: "white", color: "#FFFFFF" },
+	{ name: "yellow", color: "#F3DDA3" },
+	{ name: "blue", color: "#D3E3F5" },
+	{ name: "steel", color: "#B9D1ED" },
+	{ name: "pink", color: "#FDA9C9" },
+	{ name: "purple", color: "#AF8ABD" },
+	{ name: "orange", color: "#D76943" },
 ];

@@ -16,8 +16,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang="en">
 			<body className={`${rubik.className} min-h-screen pt-4 sm:pt-6`}>
 				<Header />
-				<main className="flex flex-col items-center justify-between px-6 py-12 sm:px-12">
-					<section className="mx-auto max-w-6xl p-6 sm:p-12">{children}</section>
+				<main className="relative flex flex-col items-center justify-between px-6 py-12 sm:px-12">
+					<div className="container max-w-6xl items-center">{children}</div>
 				</main>
 			</body>
 		</html>

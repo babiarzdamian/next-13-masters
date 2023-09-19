@@ -3,21 +3,16 @@
 @tailwind utilities;
 
 :root {
-	--foreground-rgb: 0, 0, 0;
+	--foreground-rgb: 33, 33, 33;
 	--background-start-rgb: 255, 255, 255;
 	--background-end-rgb: 200, 200, 200;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 85, 85, 85;
-		--background-end-rgb: 0, 0, 0;
-	}
-}
-
 body {
 	color: rgb(var(--foreground-rgb));
-	background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
-		rgb(var(--background-start-rgb));
+}
+
+.bleed {
+	box-shadow: 0 0 0 100vmax var(--tw-shadow-color);
+	clip-path: inset(0 -100vmax);
 }

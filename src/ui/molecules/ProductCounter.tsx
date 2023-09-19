@@ -1,23 +1,31 @@
-import { useState } from "react";
+"use client";
 
-export const ProductCounter = () => {
+import { useState } from "react";
+import { ProductCounterButton } from "../atoms/ProductCounterButton";
+
+type ProductCounterProps = {
+	max: number;
+};
+
+export const ProductCounter = ({ max }: ProductCounterProps) => {
 	const [count, setCount] = useState(1);
 
+	if (count < 1) setCount(1);
+	if (count > max) setCount(max);
+
 	return (
-		<div>
-			<button
-				onClick={() => setCount((count) => count - 1)}
-				className="rounded-l bg-gray-200 px-2 py-1 text-gray-600"
-			>
+		<div className="min-w-max">
+			<ProductCounterButton disabled={count === 1} onClick={() => setCount((count) => count - 1)}>
 				-
-			</button>
-			<input readOnly min={0} className="bg-gray-200 px-2 py-1 text-gray-600" value={count} />
-			<button
-				onClick={() => setCount((count) => count + 1)}
-				className="rounded-r bg-gray-200 px-2 py-1 text-gray-600"
-			>
+			</ProductCounterButton>
+			<input
+				readOnly
+				className="w-12 bg-white px-0 py-3 text-center text-gray-600 focus:outline-none"
+				value={count}
+			/>
+			<ProductCounterButton disabled={count === max} onClick={() => setCount((count) => count + 1)}>
 				+
-			</button>
+			</ProductCounterButton>
 		</div>
 	);
 };
